@@ -1,12 +1,12 @@
 package edu.kis.vh.nursery;
 
-import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
+import edu.kis.vh.nursery.factory.RhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactoryInterface;
 
 class RhymersDemo {
 
 	public static void main(String[] args) {
-		RhymersFactoryInterface factory = new DefaultRhymersFactory();
+		RhymersFactoryInterface factory = new RhymersFactory();
 		
 		CountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
 				factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
