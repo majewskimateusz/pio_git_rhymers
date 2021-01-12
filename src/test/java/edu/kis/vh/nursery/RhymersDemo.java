@@ -8,7 +8,7 @@ class RhymersDemo {
 	public static void main(String[] args) {
 		RhymersFactoryInterface factory = new RhymersFactory();
 		
-		CountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
+		OutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
 				factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
 		
 		for (int i = 1; i < 15; i++)

@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class CountingOutRhymer {
+public class OutRhymer {
 
 	private int[] NUMBERS = new int[12];
 
