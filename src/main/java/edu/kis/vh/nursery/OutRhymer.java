@@ -3,12 +3,13 @@ package edu.kis.vh.nursery;
 public class OutRhymer {
 
 
-	public static final int EMPTY_FLAG = -1;
+	public static final int DEFAULT_VALUE = -1;
+	public static final int EMPTY_MARKER = -1;
 	public static final int NUMBERS_SIZE = 12;
 
 	private final int[] numbers = new int[NUMBERS_SIZE];
 
-	public int total = EMPTY_FLAG;
+	public int total = EMPTY_MARKER;
 
 	public void countIn(int in) {
 		if (!isFull())
@@ -16,7 +17,7 @@ public class OutRhymer {
 	}
 
 	public boolean callCheck() {
-		return total == EMPTY_FLAG;
+		return total == EMPTY_MARKER;
 	}
 
 	public boolean isFull() {
@@ -25,13 +26,13 @@ public class OutRhymer {
 
 	protected int peekABoo() {
 		if (callCheck())
-			return EMPTY_FLAG;
+			return DEFAULT_VALUE;
 		return numbers[total];
 	}
 
 	public int countOut() {
 		if (callCheck())
-			return EMPTY_FLAG;
+			return DEFAULT_VALUE;
 		return numbers[total--];
 	}
 }
