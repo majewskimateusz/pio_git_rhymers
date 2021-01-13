@@ -9,6 +9,7 @@ int rejected = 0;
 		return rejected;
 	}
 
+	@Override
 	public void countIn(int in) {
 		if (!callCheck() && in > peekABoo())
 			rejected++;
