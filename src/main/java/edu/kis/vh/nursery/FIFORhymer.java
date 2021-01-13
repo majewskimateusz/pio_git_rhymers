@@ -2,19 +2,19 @@ package edu.kis.vh.nursery;
 
 public class FIFORhymer extends OutRhymer {
 
-	public OutRhymer t = new OutRhymer();
+	public final OutRhymer T = new OutRhymer();
 
 	@Override
 	public int countOut() {
 		while (!callCheck())
 			
-		t.countIn(super.countOut());
+		T.countIn(super.countOut());
 		
-		int returned = t.countOut();
+		int returned = T.countOut();
 		
-		while (!t.callCheck())
+		while (!T.callCheck())
 			
-		countIn(t.countOut());
+		countIn(T.countOut());
 		
 		return returned;
 	}

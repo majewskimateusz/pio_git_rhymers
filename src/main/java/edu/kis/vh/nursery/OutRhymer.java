@@ -6,7 +6,7 @@ public class OutRhymer {
 	public static final int EMPTY_FLAG = -1;
 	public static final int NUMBERS_SIZE = 12;
 
-	private int[] numbers = new int[NUMBERS_SIZE];
+	private final int[] numbers = new int[NUMBERS_SIZE];
 
 	public int total = EMPTY_FLAG;
 
