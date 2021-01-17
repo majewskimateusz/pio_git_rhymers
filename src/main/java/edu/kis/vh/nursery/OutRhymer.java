@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
-public class OutRhymer {
+ public class OutRhymer {
 
 
 	public static final int DEFAULT_VALUE = -1;
