@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.stack.IntStack;
+
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
 
@@ -9,13 +11,19 @@ public class HanoiRhymer extends DefaultCountingOutRhymer {
 		return rejected;
 	}
 
+	public HanoiRhymer(IntStack sta) {
+		super(sta);
+	}
+
+
 	@Override
 	public void countIn(int in) {
 		if (!callCheck() && in > peekABoo()) {
-			rejected++;
+			rejected+=1;
 		}
-		else
+		else {
 			super.countIn(in);
+		}
 	}
 
 
