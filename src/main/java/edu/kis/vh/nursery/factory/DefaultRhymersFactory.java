@@ -1,30 +1,51 @@
 package edu.kis.vh.nursery.factory;
 
-import edu.kis.vh.nursery.defaultCountingOutRhymer;
-import edu.kis.vh.nursery.FIFORhymer;
 import edu.kis.vh.nursery.HanoiRhymer;
-import edu.kis.vh.nursery.factory.Rhymersfactory;
+import edu.kis.vh.nursery.DefaultCountingOutRhymer;
+import edu.kis.vh.nursery.FIFORhymer;
+import edu.kis.vh.nursery.stack.IntArrayStack;
 
-public class DefaultRhymersFactory implements Rhymersfactory {
+/**
+ *
+ * klasa implementuje interfejs RhymersFactoryInterface
+ */
+public class DefaultRhymersFactory implements RhymersFactory {
 
+	/**
+	 *metoda nadpisywana z interfejsu RhymersFactoryInterface
+	 * zwraca OutRhymer
+	 */
 	@Override
-	public defaultCountingOutRhymer GetStandardRhymer() {
-		return new defaultCountingOutRhymer();
+	public DefaultCountingOutRhymer getStandardRhymer() {
+		return new DefaultCountingOutRhymer(new IntArrayStack());
 	}
 
-	@Override
-	public defaultCountingOutRhymer GetFalseRhymer() {
-		return new defaultCountingOutRhymer();
-	}
+	/**
+	 *metoda nadpisywana z interfejsu RhymersFactoryInterface
+	 * zwraca OutRhymer
+	 */
 
 	@Override
-	public defaultCountingOutRhymer GetFIFORhymer() {
-		return new FIFORhymer();
+	public DefaultCountingOutRhymer getFalseRhymer() {
+		return new DefaultCountingOutRhymer(new IntArrayStack());
 	}
 
+	/**
+	 *metoda nadpisywana z interfejsu RhymersFactoryInterface
+	 * zwraca FIFORhymer
+	 */
 	@Override
-	public defaultCountingOutRhymer GetHanoiRhymer() {
-		return new HanoiRhymer();
+	public DefaultCountingOutRhymer getFIFORhymer() {
+		return new FIFORhymer(new IntArrayStack());
+	}
+
+	/**
+	 *metoda nadpisywana z interfejsu RhymersFactoryInterface
+	 * zwraca HanoiRhymer
+	 */
+	@Override
+	public DefaultCountingOutRhymer getHanoiRhymer() {
+		return new HanoiRhymer(new IntArrayStack());
 	}
 
 }
