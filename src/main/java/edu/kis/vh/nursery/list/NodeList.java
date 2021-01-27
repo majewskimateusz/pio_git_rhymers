@@ -6,7 +6,7 @@ public class NodeList {
 	public NodeList prev, next;
 
 	public NodeList(int i) {
-		value = i;
+		this.value = i;
 	}
 	
 }

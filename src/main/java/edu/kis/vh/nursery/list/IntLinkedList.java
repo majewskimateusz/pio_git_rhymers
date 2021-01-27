@@ -9,8 +9,9 @@ public class IntLinkedList {
 	int i;
 
 	public void push(int i) {
-		if (last == TERMINATING_NODE)
+		if (last == TERMINATING_NODE) {
 			last = new NodeList(i);
+		}
 		else {
 			last.next = new NodeList(i);
 			last.next.prev = last;
@@ -27,14 +28,16 @@ public class IntLinkedList {
 	}
 
 	public int top() {
-		if (isEmpty())
+		if (isEmpty()) {
 			return DEFAULT_VALUE;
+		}
 		return last.value;
 	}
 
 	public int pop() {
-		if (isEmpty())
+		if (isEmpty()) {
 			return DEFAULT_VALUE;
+		}
 		int returned = last.value;
 		last = last.prev;
 		return returned;

@@ -1,51 +1,15 @@
 package edu.kis.vh.nursery.factory;
 
-import edu.kis.vh.nursery.HanoiRhymer;
-import edu.kis.vh.nursery.OutRhymer;
-import edu.kis.vh.nursery.FIFORhymer;
+import edu.kis.vh.nursery.DefaultCountingOutRhymer;
 
+public interface RhymersFactory {
 
-/**
- *
- * klasa implementuje interfejs RhymersFactoryInterface
- */
-public class RhymersFactory implements RhymersFactoryInterface {
+	public DefaultCountingOutRhymer getStandardRhymer();
 
-	/**
-	 *metoda nadpisywana z interfejsu RhymersFactoryInterface
-	 * zwraca OutRhymer
-	 */
-	@Override
-	public OutRhymer GetStandardRhymer() {
-		return new OutRhymer();
-	}
+	public DefaultCountingOutRhymer getFalseRhymer();
 
-	/**
-	 *metoda nadpisywana z interfejsu RhymersFactoryInterface
-	 * zwraca OutRhymer
-	 */
+	public DefaultCountingOutRhymer getFIFORhymer();
 
-	@Override
-	public OutRhymer GetFalseRhymer() {
-		return new OutRhymer();
-	}
-
-	/**
-	 *metoda nadpisywana z interfejsu RhymersFactoryInterface
-	 * zwraca FIFORhymer
-	 */
-	@Override
-	public OutRhymer GetFIFORhymer() {
-		return new FIFORhymer();
-	}
-
-	/**
-	 *metoda nadpisywana z interfejsu RhymersFactoryInterface
-	 * zwraca HanoiRhymer
-	 */
-	@Override
-	public OutRhymer GetHanoiRhymer() {
-		return new HanoiRhymer();
-	}
+	public DefaultCountingOutRhymer getHanoiRhymer();
 
 }

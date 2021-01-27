@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery;
 
- public class OutRhymer {
+ public class DefaultCountingOutRhymer {
 
 
 	public static final int DEFAULT_VALUE = -1;
@@ -12,8 +12,9 @@ package edu.kis.vh.nursery;
 	public int total = EMPTY_MARKER;
 
 	public void countIn(int in) {
-		if (!isFull())
+		if (!isFull()) {
 			numbers[++total] = in;
+		}
 	}
 
 	public boolean callCheck() {
@@ -25,14 +26,16 @@ package edu.kis.vh.nursery;
 	}
 
 	protected int peekABoo() {
-		if (callCheck())
+		if (callCheck()) {
 			return DEFAULT_VALUE;
+		}
 		return numbers[total];
 	}
 
 	public int countOut() {
-		if (callCheck())
+		if (callCheck()) {
 			return DEFAULT_VALUE;
+		}
 		return numbers[total--];
 	}
 }

@@ -1,18 +1,18 @@
 package edu.kis.vh.nursery;
 
+import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.RhymersFactory;
-import edu.kis.vh.nursery.factory.RhymersFactoryInterface;
 
 class RhymersDemo {
 	public static void main(String[] args) {
-		RhymersFactoryInterface factory = new RhymersFactory();
+		RhymersFactory factory = new DefaultRhymersFactory();
 		testRhymers(factory);
 	}
 
 
-	public static void testRhymers(RhymersFactoryInterface factory) {
-		OutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
-				factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
+	public static void testRhymers(RhymersFactory factory) {
+		DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
+				factory.getFIFORhymer(), factory.getHanoiRhymer()};
 
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
